@@ -48,7 +48,6 @@ git clone origin https://github.com/sitra061212/CodeAlpha_Url_Shortener_Frontend
    ```
    npm run dev
    ```
-
    The app will be available on `http://localhost:5173`.
 
 ## Project Structure
