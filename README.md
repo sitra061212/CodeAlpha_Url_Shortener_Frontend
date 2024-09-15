@@ -1,50 +1,74 @@
-# React + TypeScript + Vite
+# URL Shortener Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the **frontend** of a URL shortener application, built using **React**, **TypeScript**, **Vite**, and **Tailwind CSS**. The frontend allows users to input a long URL and receive a shortened version using the backend API.
 
-Currently, two official plugins are available:
+## Project Goal
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The purpose of this project is to create a user-friendly interface that interacts with a backend API to shorten URLs. Users input a long URL into the form, and the application displays a shortened version in return.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Submit Long URLs**: Users can input a long URL and submit it for shortening.
+- **Display Shortened URL**: After submission, the shortened URL is shown on the screen.
+- **Tailwind CSS Styling**: Simple, modern, and responsive design using Tailwind CSS.
+- **Error Handling**: Provides basic error handling for failed API requests.
 
-- Configure the top-level `parserOptions` property like this:
+## Technologies Used
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **React**: For building the interactive user interface.
+- **TypeScript**: For static typing to improve code quality.
+- **Vite**: For fast bundling and development environment.
+- **Tailwind CSS**: For responsive and utility-first styling.
+
+## Prerequisites
+
+Before starting, ensure you have the following tools installed:
+
+- **Node.js** (v14.x or higher)
+- **npm** or **yarn**
+- Running backend API for URL shortening
+
+## Getting Started
+
+1. **Clone the Repository**:
+
+   ```
+git clone origin https://github.com/sitra061212/CodeAlpha_Url_Shortener_Frontend.git   cd url-shortener-frontend
+   ```
+
+2. **Install Dependencies**:
+
+   ```
+   npm install
+
+   ```
+
+3. **Run the Development Server**:
+
+   ```
+   npm run dev
+   ```
+
+   The app will be available on `http://localhost:5173`.
+
+## Project Structure
+
 ```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+url-shortener-frontend/
+├── src/
+│   ├── components/
+│   │   ├── UrlForm.tsx           # Component for submitting long URLs
+│   │   ├── UrlDisplay.tsx        # Component for displaying the shortened URL
+│   ├── App.tsx                   # Root component
+│   ├── index.css                 # Global styles and Tailwind setup
+│   ├── main.tsx                  # Entry point for the React app
+│   └── vite-env.d.ts             # TypeScript Vite environment types
+├── public/
+│   └── index.html                # HTML template
+├── .gitignore                    # Files to ignore in version control
+├── package.json                  # Project metadata and dependencies
+├── tailwind.config.js            # Tailwind CSS configuration
+├── tsconfig.json                 # TypeScript configuration
+├── vite.config.ts                # Vite configuration
+└── README.md                     # Project documentation
 ```
